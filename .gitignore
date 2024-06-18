@@ -1,0 +1,42 @@
+#
+# Unity Files
+#
+
+/Library
+/UserSettings
+/Temp
+/Logs
+/obj
+
+#
+# IDE Files
+#
+
+/.idea
+/.vs
+*.svd
+*.userprefs
+*.csproj
+*.pidb
+*.suo
+*.sln
+*.user
+*.unityproj
+*.booproj
+Assembly-CSharp.csproj.DotSettings
+
+#
+# OS Files
+#
+
+.DS_Store
+.Trashes
+ehthumbs.db
+Thumbs.db
+Thumbs.db.meta
+
+#
+# Builds
+#
+
+/Builds
