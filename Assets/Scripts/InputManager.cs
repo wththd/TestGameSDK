@@ -1,3 +1,4 @@
+using SDK;
 using UnityEngine;
 
 public class InputManager : MonoBehaviour
@@ -21,10 +22,12 @@ public class InputManager : MonoBehaviour
         if (clickPosition.x > 0f)
         {
             rightPaddle.MoveToY(clickPosition.y);
+            GameSDK.Instance.SessionTracker.IncreaseValue("right_move_count");
         }
         else
         {
             leftPaddle.MoveToY(clickPosition.y);
+            GameSDK.Instance.SessionTracker.IncreaseValue("left_move_count");
         }
     }
 }
