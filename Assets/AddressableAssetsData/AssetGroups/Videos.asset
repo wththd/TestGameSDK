@@ -1,0 +1,49 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Videos
+  m_EditorClassIdentifier: 
+  m_GroupName: Videos
+  m_Data:
+    m_SerializedData: []
+  m_GUID: cbc61cfad9213ab4a9c84ba953b48b95
+  m_SerializeEntries:
+  - m_GUID: 3293f3391a93543c4a2303175def8c66
+    m_Address: Assets/Videos/vid5.mp4
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 8280db4bc18f948b598f9b1c3786159d
+    m_Address: Assets/Videos/vid2.mp4
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 9fa880a214dec4cbc905e22c9b2fdda3
+    m_Address: Assets/Videos/vid6.mp4
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 5633e40fd016c453ca83cb8a63efb588
+    m_Address: Assets/Videos/vid4.mp4
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: cce262816357d40bc83b77123cf02757
+    m_Address: Assets/Videos/vid3.mp4
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 99fe44f273f1243b2a4efbdcef9cb186
+    m_Address: Assets/Videos/vid1.mp4
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 5c1700967b587d547ac3e35b9368234a, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 8fd364a4112d4d746a50571f1bdb40e6, type: 2}
+    - {fileID: 11400000, guid: 24b3f6e1c1da32d4d8c71555e18dcf1b, type: 2}

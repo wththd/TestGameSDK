@@ -4,26 +4,26 @@ namespace SDK.Tracking
 {
     public class SessionStatsTracker : ISessionStatsTracker
     {
-        private Dictionary<string, object> _values = new();
+        private Dictionary<string, int> _values = new();
 
-        public void SetParameter(string key, object value)
+        public void SetParameter(string key, int value)
         {
             _values[key] = value;
         }
 
-        public T GetParameter<T>(string key)
+        public int GetParameter(string key)
         {
             if (!_values.ContainsKey(key))
             {
-                return default;
+                return 0;
             }
 
-            return (T)_values[key];
+            return _values[key];
         }
 
         public int IncreaseValue(string key)
         {
-            var value = GetParameter<int>(key) + 1;
+            var value = GetParameter(key) + 1;
             SetParameter(key, value);
             return value;
         }

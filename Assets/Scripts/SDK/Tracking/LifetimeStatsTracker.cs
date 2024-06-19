@@ -5,7 +5,7 @@ namespace SDK.Tracking
 {
     public class LifetimeStatsTracker : ILifetimeStatsTracker
     {
-        private Dictionary<string, object> _objects;
+        private Dictionary<string, int> _objects;
         private const string SaveKey = "LifetimeStats";
 
         public LifetimeStatsTracker()
@@ -13,16 +13,16 @@ namespace SDK.Tracking
             if (PlayerPrefs.HasKey(SaveKey))
             {
                 _objects =
-                    Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, object>>(
+                    Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, int>>(
                         PlayerPrefs.GetString(SaveKey));
             }
             else
             {
-                _objects = new Dictionary<string, object>();
+                _objects = new Dictionary<string, int>();
             }
         }
         
-        public void SetParameter(string key, object value)
+        public void SetParameter(string key, int value)
         {
             _objects[key] = value;
             var json = Newtonsoft.Json.JsonConvert.SerializeObject(_objects);
@@ -30,19 +30,19 @@ namespace SDK.Tracking
             PlayerPrefs.Save();
         }
 
-        public T GetParameter<T>(string key)
+        public int GetParameter(string key)
         {
             if (!_objects.ContainsKey(key))
             {
-                return default;
+                return 0;
             }
 
-            return (T)_objects[key];
+            return _objects[key];
         }
 
         public int IncreaseValue(string key)
         {
-            var value = GetParameter<int>(key) + 1;
+            var value = GetParameter(key) + 1;
             SetParameter(key, value);
             return value;
         }

@@ -2,8 +2,8 @@
 {
     public interface ISessionStatsTracker
     {
-        void SetParameter(string key, object value);
-        T GetParameter<T>(string key);
+        void SetParameter(string key, int value);
+        int GetParameter(string key);
         int IncreaseValue(string key);
     }
 }

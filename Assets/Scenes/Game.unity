@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.12729266, g: 0.13414232, b: 0.12114291, a: 1}
+  m_IndirectSpecularColor: {r: 0.12731749, g: 0.13414757, b: 0.1210787, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -552,6 +552,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e9e056b8b3ae443eac3d0d3c427ae76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _videoClips:
+  - m_AssetGUID: 99fe44f273f1243b2a4efbdcef9cb186
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+  - m_AssetGUID: 8280db4bc18f948b598f9b1c3786159d
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+  - m_AssetGUID: cce262816357d40bc83b77123cf02757
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+  - m_AssetGUID: 5633e40fd016c453ca83cb8a63efb588
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+  - m_AssetGUID: 3293f3391a93543c4a2303175def8c66
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+  - m_AssetGUID: 9fa880a214dec4cbc905e22c9b2fdda3
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
 --- !u!1 &580276108
 GameObject:
   m_ObjectHideFlags: 0

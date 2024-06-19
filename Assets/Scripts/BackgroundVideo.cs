@@ -1,24 +1,26 @@
+using System.Threading.Tasks;
 using UnityEngine;
+using UnityEngine.AddressableAssets;
 using UnityEngine.Video;
 
 [RequireComponent(typeof(VideoPlayer))]
 public class BackgroundVideo : MonoBehaviour
 {
-    private VideoClip[] _videoClips;
+    [SerializeField] private AssetReferenceT<VideoClip>[] _videoClips;
     private VideoPlayer _videoPlayer;
 
-    private void Start()
+    private async void Start()
     {
-        _videoClips = Resources.LoadAll<VideoClip>("Videos");
-
         _videoPlayer = GetComponent<VideoPlayer>();
 
-        _videoPlayer.clip = PickRandomVideoClip();
+        _videoPlayer.clip = await PickRandomVideoClipAsync();
         _videoPlayer.Play();
     }
 
-    private VideoClip PickRandomVideoClip()
+    private async Task<VideoClip> PickRandomVideoClipAsync()
     {
-        return _videoClips[Random.Range(0, _videoClips.Length)];
+        var clipReference = _videoClips[Random.Range(0, _videoClips.Length)];
+        var result = await clipReference.LoadAssetAsync().Task;
+        return result;
     }
 }
