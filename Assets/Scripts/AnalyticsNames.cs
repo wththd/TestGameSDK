@@ -4,7 +4,6 @@
     public const string LoadTime = "load_time";
     public const string LevelInSession = "level_in_session";
     public const string LevelsPlayedTotal = "levels_played_total";
-    public const string LevelsPlayedSession = "levels_played_session";
     public const string Winner = "winner";
     public const string LeftMoveCount = "left_move_count";
     public const string RightMoveCount = "right_move_count";

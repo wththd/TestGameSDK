@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da1cb7db13104307bf06b6199ee488ec, type: 3}
+  m_Name: AndroidBuildConfig
+  m_EditorClassIdentifier: 
+  _devBuild: 1
+  _symlinkLibraries: 0
+  _connectWithProfiler: 0
+  _isAab: 0
+  _buildsPath: Builds
+  _addressableDataBuilder: {fileID: 11400000, guid: d63cda869d7c93e45b83fc0388dca1de, type: 2}

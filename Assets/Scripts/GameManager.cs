@@ -16,7 +16,6 @@ public class GameManager : MonoBehaviour
     {
         var levelsPlayedTotal = GameSDK.Instance.LifetimeTracker.GetParameter(AnalyticsNames.LevelsPlayedTotal);
         var levelInSession = GameSDK.Instance.SessionTracker.GetParameter(AnalyticsNames.LevelInSession) + 1;
-        var levelsPlayedSession = GameSDK.Instance.SessionTracker.GetParameter(AnalyticsNames.LevelsPlayedSession);
         
 #if USE_CRASHLYTICS
         SetUpCrashlytics(levelInSession);
@@ -36,8 +35,7 @@ public class GameManager : MonoBehaviour
         GameSDK.Instance.Analytics.SendEvent(new AnalyticEvent(AnalyticsNames.LevelStart)
             .AddParameter(AnalyticsNames.SessionId, GameSDK.Instance.SessionCount)
             .AddParameter(AnalyticsNames.LevelInSession, levelInSession)
-            .AddParameter(AnalyticsNames.LevelsPlayedTotal, levelsPlayedTotal)
-            .AddParameter(AnalyticsNames.LevelsPlayedSession, levelsPlayedSession));
+            .AddParameter(AnalyticsNames.LevelsPlayedTotal, levelsPlayedTotal));
     }
     
 #if USE_CRASHLYTICS
@@ -59,7 +57,6 @@ public class GameManager : MonoBehaviour
         
         GameSDK.Instance.LifetimeTracker.IncreaseValue(AnalyticsNames.LevelsPlayedTotal);
         var levelInSession = GameSDK.Instance.SessionTracker.GetParameter(AnalyticsNames.LevelInSession);
-        GameSDK.Instance.SessionTracker.IncreaseValue(AnalyticsNames.LevelsPlayedSession);
         var leftMoveCount = GameSDK.Instance.SessionTracker.GetParameter(AnalyticsNames.LeftMoveCount);
         var rightMoveCount = GameSDK.Instance.SessionTracker.GetParameter(AnalyticsNames.RightMoveCount);
         var playTime = new TimeSpan(DateTime.Now.Ticks - _startPlaytime);
